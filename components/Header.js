@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
         <div className="px-2 md:w-1/2 lg:2/3">
           <h3 className="font-serif font-semibold pb-4 tracking-wide md:text-2xl text-slate-400">
-            Hello! I'm Josh
+            Hello! I&apos;m Josh
           </h3>
           <h1 className="tracking-wider text-2xl font-bold md:text-4xl pb-4">
             Freelance Web Developer & Designer
