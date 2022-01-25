@@ -4,10 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-section {
-  background: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgb(32, 32, 32) 100%);
-}
-
 .project {
   min-height: 350px;
+}
+
+.webgl {
+  height: 400px;
+  canvas {
+    touch-action: none;
+  }
 }

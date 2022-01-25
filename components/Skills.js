@@ -3,7 +3,7 @@ import SkillCard from "./SkillCard";
 
 const Skills = () => {
   return (
-    <section className="skills py-12 border-b border-gray-800">
+    <section className="skills py-12 border-b dark:border-gray-800">
       <div className="container mx-auto">
         <div className="text-center">
           <h1 className="pb-4 font-bold text-3xl tracking-wide">
@@ -13,7 +13,7 @@ const Skills = () => {
             List of my proficiencies for specific needs.
           </h3>
         </div>
-        <div className="skills flex flex-wrap justify-around py-6">
+        <div className="skills flex flex-wrap justify-center py-6">
           <SkillCard />
           <SkillCard />
           <SkillCard />

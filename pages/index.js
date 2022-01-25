@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Services from "../components/Services";
 import Skills from "../components/Skills";
+import Cta from "../components/Cta";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Projects />
         <Services />
         <Skills />
+        <Cta />
       </main>
     </Layout>
   );
