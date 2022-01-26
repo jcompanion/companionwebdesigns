@@ -28,7 +28,7 @@ const Cta = () => {
               512 387-4216
             </p>
           </a>
-          <a href="mailto: hello@companionwebdesigns.com" target="_blank">
+          <a href="mailto: hello@companionwebdesigns.com">
             <p className="transition-all text-lg font-medium text-gray-700 dark:text-gray-200 hover:text-brandtwo dark:hover:text-brandtwo">
               hello@companionwebdesigns.com
             </p>

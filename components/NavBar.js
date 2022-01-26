@@ -43,18 +43,18 @@ const NavBar = () => {
             (isOpen ? "flex flex-col" : "hidden")
           }
         >
-          <Link href="/">
+          <Link href="#projects">
             <a className="transition-all py-4 hover:text-brand font-medium text-lg">
               Projects
             </a>
           </Link>
 
-          <Link href="/">
+          <Link href="#services">
             <a className="transition-all py-4 hover:text-brand font-medium text-lg">
               Services
             </a>
           </Link>
-          <Link href="/">
+          <Link href="mailto: hello@companionwebdesigns.com">
             <a className="transition-all py-4 hover:text-brand font-medium text-lg">
               Contact
             </a>

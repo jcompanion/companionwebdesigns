@@ -3,7 +3,7 @@ import SkillCard from "./SkillCard";
 
 const Skills = () => {
   return (
-    <section className="skills py-12 border-b dark:border-gray-800">
+    <section className="skills py-12 border-b bg-gradient-to-b from-white to-slate-100 dark:bg-gradient-to-b dark:from-black dark:to-slate-900 dark:border-gray-800">
       <div className="container mx-auto">
         <div className="text-center">
           <h1 className="pb-4 font-bold text-3xl tracking-wide">
@@ -14,7 +14,7 @@ const Skills = () => {
           </h3>
         </div>
         <div className="skills flex flex-wrap justify-center py-6">
-          <SkillCard />
+          <SkillCard small={true} />
           <SkillCard />
           <SkillCard />
           <SkillCard />

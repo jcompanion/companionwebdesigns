@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 
 import Model from "./Rocket1";
 
@@ -18,9 +18,10 @@ function Loader() {
 }
 
 const Header = () => {
+  const [hover, setHover] = useState(0);
   return (
     <>
-      <section className="hero py-12  border-b bg-gradient-to-b from-white to-slate-100 dark:bg-gradient-to-b dark:from-black dark:to-slate-900 dark:border-gray-800">
+      <section className="hero py-12 border-b bg-gradient-to-b from-white to-slate-100 dark:bg-gradient-to-b dark:from-black dark:to-slate-900 dark:border-gray-800">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
           <div className="px-2 md:w-1/2 lg:2/3 z-20">
             <h3 className="font-serif font-semibold text-gray-700 pb-4 tracking-wide md:text-2xl dark:text-slate-400">
@@ -43,7 +44,11 @@ const Header = () => {
               </button>
             </div>
           </div>
-          <div className="webgl left-0 w-full lg:w-1/3">
+          <div
+            className={
+              "webgl w-full lg:w-1/3 " + (hover ? "cursor-grab" : "cursor")
+            }
+          >
             <Canvas
               dpr={[1, 2]}
               camera={{
@@ -69,7 +74,11 @@ const Header = () => {
                   far={10}
                   resolution={256}
                 />
-                <Model position={[0, -2, 0]} />
+                <Model
+                  onPointerOver={(event) => setHover(true)}
+                  onPointerOut={(event) => setHover(false)}
+                  position={[0, -2, 0]}
+                />
               </Suspense>
             </Canvas>
           </div>

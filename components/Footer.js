@@ -27,31 +27,41 @@ const Footer = () => {
           </Link>
         </div>
         <div className="pb-2">
-          <a href="/">
-            <p className="text-brandtwo font-semibold tracking-wide font-serif pb-2 hover:text-cyan-200 transition-all">
-              Privacy Policy
-            </p>
-          </a>
-          <a href="/">
-            <p className="text-brandtwo font-semibold tracking-wide pb-2 font-serif hover:text-cyan-200 transition-all">
-              Terms &amp; Conditions{" "}
-            </p>
-          </a>
+          <Link href="/privacy-policy">
+            <a>
+              <p className="text-brandtwo font-semibold tracking-wide font-serif pb-2 hover:text-cyan-200 transition-all">
+                Privacy Policy
+              </p>
+            </a>
+          </Link>
+          <Link href="/terms-conditions">
+            <a>
+              <p className="text-brandtwo font-semibold tracking-wide pb-2 font-serif hover:text-cyan-200 transition-all">
+                Terms &amp; Conditions{" "}
+              </p>
+            </a>
+          </Link>
           <p className="text-gray-300 font-serif">
             &copy; {new Date().getFullYear()} CompanionWebDesigns
           </p>
         </div>
         <div className="flex flex-row">
-          <a href="/">
-            <AiFillGithub className="transition-all h-6 w-6 m-2 hover:fill-brand" />
-          </a>
+          <Link href="/">
+            <a>
+              <AiFillGithub className="transition-all h-6 w-6 m-2 hover:fill-brand" />
+            </a>
+          </Link>
 
-          <a href="/">
-            <AiOutlineBehance className="transition-all h-6 w-6 m-2 hover:fill-brand" />
-          </a>
-          <a href="/">
-            <AiOutlineInstagram className="transition-all h-6 w-6 m-2 hover:fill-brand" />
-          </a>
+          <Link href="/">
+            <a>
+              <AiOutlineBehance className="transition-all h-6 w-6 m-2 hover:fill-brand" />
+            </a>
+          </Link>
+          <Link href="/">
+            <a>
+              <AiOutlineInstagram className="transition-all h-6 w-6 m-2 hover:fill-brand" />
+            </a>
+          </Link>
         </div>
       </div>
     </footer>
