@@ -6,25 +6,27 @@ import Projects from "../components/Projects";
 import Services from "../components/Services";
 import Skills from "../components/Skills";
 import Cta from "../components/Cta";
+
 import { fetchAPI } from "../utils/api";
 
 export async function getStaticProps() {
-  const projects = await fetchAPI("projects");
-
+  const projectData = await fetchAPI("projects");
+  console.log(projectData);
   return {
     props: {
-      projects,
+      projectData,
     },
+
     revalidate: 30,
   };
 }
 
-export default function Home(props) {
+export default function Home({ projectData }) {
   return (
     <Layout>
       <main>
         <Header />
-        <Projects props={props} />
+        <Projects props={projectData} />
         <Services />
         <Skills />
         <Cta />

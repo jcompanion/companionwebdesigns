@@ -1,4 +1,5 @@
 import "../styles/globals.scss";
+import "animate.css";
 import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {

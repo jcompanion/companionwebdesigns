@@ -23,15 +23,21 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .webgl {
   height: 400px;
+
+  cursor: url("../public/hover.svg") 15 15, move;
+
   canvas {
     touch-action: none;
   }
 }
 
 .project {
-  min-height: 200px;
   div {
     z-index: 1;
   }

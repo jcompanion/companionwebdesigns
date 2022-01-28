@@ -1,23 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import ProjectCard from "./ProjectCard";
-
-import { fetchAPI } from "../utils/api";
-
-export async function getStaticProps() {
-  const projects = await fetchAPI("projects");
-
-  return {
-    props: {
-      projects,
-    },
-    revalidate: 30,
-  };
-}
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Projects = ({ props }) => {
+  const controlProjects = useAnimation();
+  const { ref, inView } = useInView();
+  const variant1 = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      controlProjects.start("visible");
+    }
+    if (!inView) {
+      controlProjects.start("hidden");
+    }
+  }, [controlProjects, inView]);
+
   return (
-    <section className="projects py-16 bg-gradient-to-b from-white to-slate-100 dark:bg-gradient-to-b dark:from-black dark:to-slate-900 border-b dark:border-gray-800">
+    <section
+      id="projects"
+      className="projects py-16 bg-gradient-to-b from-white to-slate-100 dark:bg-gradient-to-b dark:from-black dark:to-slate-900 border-b dark:border-gray-800"
+    >
       <div className="container mx-auto">
         <div className="flex items-center flex-col text-center p-2 mb-4">
           <h1 className="text-2xl font-semibold tracking-wide pb-4">
@@ -28,11 +41,17 @@ const Projects = ({ props }) => {
             Prototypes.
           </p>
         </div>
-        <div className="projects-container pt-8 w-2/3 masonry-sm mx-auto before:box-inherit after:box-inherit">
-          {props.projects.map((project) => (
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={controlProjects}
+          variants={variant1}
+          className="projects-container pt-8 w-2/3 masonry sm:masonry-sm mx-auto before:box-inherit after:box-inherit"
+        >
+          {props.map((project) => (
             <ProjectCard key={project.id} props={project} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
