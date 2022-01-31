@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:1337";
+const baseUrl = "https://cwd-backend.herokuapp.com";
 
 // Helper to make GET requests to Strapi
 export async function fetchAPI(path) {

@@ -11,7 +11,6 @@ import { fetchAPI } from "../utils/api";
 
 export async function getStaticProps() {
   const projectData = await fetchAPI("projects");
-  console.log(projectData);
   return {
     props: {
       projectData,
