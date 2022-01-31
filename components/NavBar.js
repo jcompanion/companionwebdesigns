@@ -22,7 +22,6 @@ const NavBar = () => {
   return (
     <nav className="sticky top-0 right-0 w-full p-2 transition-all bg-gray-100 dark:bg-black bg-opacity-50 dark:bg-opacity-70 backdrop-filter backdrop-blur-lg z-50 border dark:border-gray-900 shadow">
       <div className="container mx-auto md:flex md:justify-between">
-        {console.log(theme)}
         <div className="w-full md:w-1/2 flex justify-between items-center">
           <div className="w-64 py-4">
             <Link href="/">

@@ -29,7 +29,7 @@ const Projects = ({ props }) => {
   return (
     <section
       id="projects"
-      className="projects py-16 bg-gradient-to-b from-white to-slate-100 dark:bg-gradient-to-b dark:from-black dark:to-slate-900 border-b dark:border-gray-800"
+      className="projects bg-gradient-to-b py-12 from-white to-slate-100 dark:bg-gradient-to-b dark:from-black dark:to-slate-900 border-b dark:border-gray-800"
     >
       <div className="container mx-auto">
         <div className="flex items-center flex-col text-center p-2 mb-4">
@@ -46,7 +46,7 @@ const Projects = ({ props }) => {
           initial="hidden"
           animate={controlProjects}
           variants={variant1}
-          className="projects-container pt-8 w-2/3 masonry sm:masonry-sm mx-auto before:box-inherit after:box-inherit"
+          className="projects-container space-y-4 py-4 w-2/3 masonry sm:masonry-sm mx-auto before:box-inherit after:box-inherit"
         >
           {props.map((project) => (
             <ProjectCard key={project.id} props={project} />

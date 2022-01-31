@@ -1,4 +1,5 @@
 import React, { Suspense, useState, useEffect } from "react";
+import Link from "next/link";
 import Model from "./Rocket1";
 import { Canvas } from "@react-three/fiber";
 import { motion, useAnimation } from "framer-motion";
@@ -121,12 +122,16 @@ const Header = () => {
               variants={variant4}
               className="flex flex-col items-center sm:flex-row justify-center md:justify-start"
             >
-              <button className="transition-all text-white dark:text-black text-md hover:opacity-70 shadow-lg hover:shadow-xl hover:scale-105 dark:hover:shadow-cyan-500/50 bg-brandtwo  border-4 border-brandtwo p-2 my-2 sm:mr-2 rounded-full font-medium tracking-wide w-36 dark:hover:border-cyan-200 dark:hover:bg-cyan-200 dark:hover:text-cyan-600">
-                View Projects
-              </button>
-              <button className="transition-all text-brandtwo text-md drop-shadow-lg hover:opacity-70 hover:shadow-xl hover:scale-105 dark:hover:shadow-cyan-500/50 border-4 border-brandtwo p-2 my-4 sm:ml-2 rounded-full font-medium tracking-wide w-36 dark:hover:text-cyan-200 dark:hover:border-cyan-200">
-                Learn More
-              </button>
+              <Link href="#projects">
+                <button className="transition-all text-white dark:text-black text-md hover:opacity-70 shadow-lg hover:shadow-xl hover:scale-105 dark:hover:shadow-cyan-500/50 bg-brandtwo  border-4 border-brandtwo p-2 my-2 sm:mr-2 rounded-full font-medium tracking-wide w-36 dark:hover:border-cyan-200 dark:hover:bg-cyan-200 dark:hover:text-cyan-600">
+                  View Projects
+                </button>
+              </Link>
+              <Link href="#services">
+                <button className="transition-all text-brandtwo text-md drop-shadow-lg hover:opacity-70 hover:shadow-xl hover:scale-105 dark:hover:shadow-cyan-500/50 border-4 border-brandtwo p-2 my-4 sm:ml-2 rounded-full font-medium tracking-wide w-36 dark:hover:text-cyan-200 dark:hover:border-cyan-200">
+                  Learn More
+                </button>
+              </Link>
             </motion.div>
           </div>
           <div className="webgl w-full lg:w-1/3 ">

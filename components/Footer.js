@@ -46,13 +46,13 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex flex-row">
-          <Link href="/">
+          <Link href="https://github.com/jcompanion">
             <a>
               <AiFillGithub className="transition-all h-6 w-6 m-2 hover:fill-brand" />
             </a>
           </Link>
 
-          <Link href="/">
+          <Link href="https://www.behance.net/joshuacompanion">
             <a>
               <AiOutlineBehance className="transition-all h-6 w-6 m-2 hover:fill-brand" />
             </a>
