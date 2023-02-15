@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { BsSun, BsMoonFill } from 'react-icons/bs';
 import Hamburger from 'hamburger-react';
-import ResumeModal from './ResumeModal';
 
 import logo from '../public/images/joshNewLight.svg';
 import logo2 from '../public/images/joshNewDark.svg';
@@ -12,7 +11,6 @@ import logo2 from '../public/images/joshNewDark.svg';
 const NavBar = () => {
   const { theme, setTheme } = useTheme();
   const [isOpen, setOpen] = useState(false);
-  const [resumeOpen, setResumeOpen] = useState(false);
   const [isMounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -23,7 +21,6 @@ const NavBar = () => {
 
   return (
     <>
-      <ResumeModal open={resumeOpen} setOpen={setResumeOpen} />
       <nav className='sticky top-0 right-0 w-full p-2 transition-all bg-gray-100 dark:bg-black bg-opacity-50 dark:bg-opacity-70 backdrop-filter backdrop-blur-lg z-50 border dark:border-gray-900 shadow'>
         <div className='container mx-auto md:flex md:justify-between'>
           <div className='w-full md:w-1/2 flex justify-between items-center'>
@@ -66,7 +63,7 @@ const NavBar = () => {
                 Services
               </a>
             </Link>
-            <Link href='mailto: hello@companionwebdesigns.com'>
+            <Link href='mailto: joshcompanion@gmail.com'>
               <a className='transition-all py-4 hover:text-brand font-medium text-lg'>
                 Contact
               </a>
