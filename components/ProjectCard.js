@@ -18,8 +18,8 @@ const ProjectCard = ({ props }) => {
     <>
       <div
         onClick={openModal}
-        className='transition-all relative project break-inside bg-brand dark:hover:shadow-cyan-500/50 rounded-lg shadow-md hover:shadow-xl hover:cursor-pointer'>
-        <div className='absolute text-white left-4 top-4 flex flex-col justify-items-center z-10'>
+        className='transition-all relative project break-inside bg-brand dark:hover:shadow-cyan-500/50 rounded-lg shadow-md hover:shadow-xl hover:cursor-pointer group'>
+        <div className='absolute text-white left-4 top-4 flex flex-col justify-items-center z-10 group-hover:opacity-100 opacity-0'>
           <h3 className='text-md font-bold text-gray-100 tracking-wide'>
             {props.client}
           </h3>
